@@ -1,1 +1,1 @@
-alert("Welcome to the web-page");
+console.log("Welcome to Javascript");

@@ -22,3 +22,27 @@ const myFunction = function(){
     console.log("Hello World");
 }
 console.log(typeof outsideTemp);
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++
+// Stack (Primitive), Heap (Non Primitive)
+
+// Stack Example
+let myYoutubename = "ashishsahudotcom"
+
+let anothername = myYoutubename
+anothername = "chaiaurcode"
+
+console.log(anothername);
+console.log(myYoutubename);
+
+// Heap Example
+let userOne = {
+    email: "ashish123.com",
+    upi: "user@ybl"
+}
+let userTwo = userOne
+userTwo.email = "sahu456.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);

@@ -1,4 +1,4 @@
-// Primitive Datatype
+// Primitive Datatype or stack memory
 // 7 types: String, Number, Boolean, null, undefined, symbol, BigInt
 
 const score = 100
@@ -10,22 +10,30 @@ const id = Symbol('123')
 const anotherId = Symbol('123')
 console.log(id === anotherId);
 
-// Reference Datatype (Non Primitive)
+// Reference Datatype (Non Primitive) or heap memory
 // Array, Objects, Functions
 
+//Array
 const heros = ["shaktiman", "naagraj", "doga"];
+
+//objects
 let myObj = {
     name: "ashish",
     age: 22
 }
+console.log(myObj);
+
+//function
 const myFunction = function(){
     console.log("Hello World");
 }
-console.log(typeof outsideTemp);
+myFunction();
 
+console.log(typeof outsideTemp);  // null is an object
 
-//+++++++++++++++++++++++++++++++++++++++++++++
-// Stack (Primitive), Heap (Non Primitive)
+// **********************************************
+console.log("**********************************");
+// Stack memory (Primitive), Heap memory (Non Primitive)
 
 // Stack Example
 let myYoutubename = "ashishsahudotcom"
@@ -33,16 +41,20 @@ let myYoutubename = "ashishsahudotcom"
 let anothername = myYoutubename
 anothername = "chaiaurcode"
 
-console.log(anothername);
 console.log(myYoutubename);
+console.log(anothername);
 
 // Heap Example
 let userOne = {
     email: "ashish123.com",
     upi: "user@ybl"
 }
+console.log(userOne);
 let userTwo = userOne
+console.log(userTwo);
 userTwo.email = "sahu456.com"
 
+console.log(userTwo);
+console.log(userOne);
 console.log(userOne.email);
 console.log(userTwo.email);

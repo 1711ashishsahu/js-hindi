@@ -8,6 +8,8 @@ for (const num of arr) {
     console.log(num);
 }
 
+
+// on string
 const greetings = "Hello world!"
 for (const greet of greetings) {
     if(greet === " "){

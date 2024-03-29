@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="300px" id="photoshop" src="https://images.pexels.com/photos/20780453/pexels-photo-20780453/free-photo-of-a-close-up-of-a-pink-cherry-blossom-tree.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" alt="photoshop"></li>
+
+            <li><img width="300px" id="japan" src="https://images.pexels.com/photos/20187399/pexels-photo-20187399/free-photo-of-amazing-autumn.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" alt=""></li>
+
+            <li><img width="300px" id="river" src="https://images.pexels.com/photos/264905/pexels-photo-264905.jpeg?auto=compress&cs=tinysrgb&w=400" alt=""></li>
+
+            <li><img width="300px" id="owl" src="https://images.pexels.com/photos/3411134/pexels-photo-3411134.jpeg?auto=compress&cs=tinysrgb&w=400" alt=""></li>
+
+            <li><img width="300px" id="prayer" src="https://images.pexels.com/photos/3314328/pexels-photo-3314328.jpeg?auto=compress&cs=tinysrgb&w=400" alt=""></li>
+
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside th ul");
+    // }, false)
+
+    // document.querySelector('#owl').addEventListener('click', function(e){
+    //     console.log('owl clicked');
+    //     e.stopPropagation()
+    // }, false)
+
+    // document.querySelector('#google').addEventListener('click', function(e){
+    //     console.log("google was clicked");
+    //     e.preventDefault()
+    // }, false)
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        // console.log(e.target.parentNode);
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+    })
+</script>
+</html>
